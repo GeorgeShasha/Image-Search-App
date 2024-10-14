@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ece8e8;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #3e8e41;
+}
+
+#search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.image-results {
+  margin-bottom: 60px;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.image-results img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-results:hover img {
+  transform: scale(1.1);
+}
+
+.image-results a {
+  padding: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.image-results:hover a {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#show-more {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #415bf3;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  display: none;
+}
+
+#show-more:hover {
+  background-color: #2f3bd0;
+}
+
+@media (max-width: 768px) {
+  .image-results {
+    width: 45%;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: auto 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search-input {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  #search-button {
+    margin-left: 0;
+  }
+
+  .image-results {
+    width: 100%;
+  }
+}
